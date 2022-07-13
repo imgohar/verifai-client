@@ -1,0 +1,66 @@
+$theme-colors: (
+    'primary': #0074d9,
+    'primary-v1': #0074d9,
+    'danger': #ff4136,
+    'dark-v1': #100303,
+    'dark-v2': #060039,
+    'dark-v3': #393e46,
+    'dark-v4': #393e46,
+    'dark-v5': #373a40,
+    'dark-v6': #1f1f1f,
+    'dark-v7': #32343d,
+    'dark-v8': #000000,
+    'grey-v1': #78797d,
+    'grey-v2': #b1b1b2,
+    'bg-light-v1': #f5f2f2,
+    'bg-light-v2': #e5e0e0,
+    'secondary-v2': #ff6700,
+    'bg-purple': #7367f0,
+    'sahal-1': #060039,
+    'sahal-2': #ffb017,
+    'sahal-3': #44ab96,
+    'sahal-4': #e53855,
+    'sahal-5': #da774a,
+);
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.selected-btn {
+    background-color: #060039 !important;
+    color: #ffb300 !important;
+}
+
+.not-selected-btn {
+    background-color: #060039 !important;
+    color: white !important;
+}
+
+.footer-link {
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-icon {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    line-height: 2.5rem;
+    color: #060039;
+    text-decoration: none;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    box-sizing: border-box;
+    height: 2.5rem;
+}
+
+.footer-icon:hover {
+    color: #060039;
+}
+
+@import '~bootstrap/scss/bootstrap.scss';
+@import 'bootstrap-icons/font/bootstrap-icons.css';

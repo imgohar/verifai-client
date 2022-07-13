@@ -1,0 +1,55 @@
+@import '~react-toastify/dist/ReactToastify.css';
+
+.Toastify__toast {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+
+    .toastify-header {
+        padding-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title-wrapper {
+            display: flex;
+            align-items: center;
+
+            .avatar svg {
+                height: 0.85rem;
+                width: 0.85rem;
+            }
+        }
+        .toast-title {
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+    }
+
+    .toastify-body {
+        // padding-left: 2.3rem;
+        font-size: 0.85rem;
+    }
+
+    .Toastify__close-button {
+        opacity: 1;
+        margin-top: 1px;
+        margin-left: 0.5rem;
+        svg {
+            height: 0.85rem;
+            width: 0.85rem;
+        }
+
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+// Media Queries
+@media (max-width: 480px) {
+    .Toastify__toast-container {
+        .Toastify__toast + .Toastify__toast {
+            margin-top: 1rem;
+        }
+    }
+}
