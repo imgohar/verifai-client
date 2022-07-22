@@ -92,7 +92,10 @@ const FacialBiometricKYCSimplified = () => {
         delete data.defaultValues;
         if (Object.values(data).every((field) => field.length > 0)) {
             const config = {
-                headers: { Authorization: `Bearer ${token}` },
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: `application/json`,
+                },
             };
 
             let response = {};
@@ -217,7 +220,11 @@ const FacialBiometricKYCSimplified = () => {
                         {showLink === true ? (
                             <div className="my-3 mt-5">
                                 <h3>Link Generated</h3>
-                                <a href={link} className="text-warning" target="_blank">
+                                <a
+                                    href={link}
+                                    className="text-warning"
+                                    target="_blank"
+                                >
                                     {link}
                                 </a>
                             </div>

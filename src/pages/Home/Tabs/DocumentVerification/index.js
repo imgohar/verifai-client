@@ -71,6 +71,7 @@ const DocumentVerification = () => {
                 Authorization: `Bearer ${token}`,
                 'content-type':
                     'multipart/form-data; charset=utf-8; boundary=23',
+                Accept: 'application/json',
             },
         };
         const formData = new FormData();

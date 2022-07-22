@@ -97,7 +97,10 @@ const DigitalSignature = () => {
         delete data.defaultValues;
         if (Object.values(data).every((field) => field.length > 0)) {
             const config = {
-                headers: { Authorization: `Bearer ${token}` },
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: `application/json`,
+                },
             };
 
             let response = {};

@@ -166,7 +166,10 @@ const VideoKYC = () => {
         delete tempData.name2;
         if (Object.values(tempData).every((field) => field.length > 0)) {
             const config = {
-                headers: { Authorization: `Bearer ${token}` },
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    Accept: `application/json`,
+                },
             };
 
             let response = {};
