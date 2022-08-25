@@ -52,6 +52,18 @@ const SahalKYCPortal = () => {
         }
     };
 
+    let a = document.getElementsByClassName('bg-sahal-secondary')[2];
+
+    console.log(a);
+    if (a != undefined) {
+        document.getElementsByClassName('bg-sahal-secondary')[2].onClick =
+            function () {
+                alert('hi');
+                console.log('hi');
+                //     window.location = '/test';
+            };
+    }
+
     const {
         control,
         setError,
@@ -84,7 +96,7 @@ const SahalKYCPortal = () => {
 
             await axios
                 .get(
-                    `https://demo.sahal.ai/api/v1/full-kyc/verification-url`,
+                    `https://demo.sahal.ai/api/v1/full-kyc/verification-url?redirect_url=https://google.com`,
                     config
                 )
                 .then((res) => {
@@ -210,8 +222,31 @@ const SahalKYCPortal = () => {
                 get approved.
             </p>
 
+            {link != '' ? (
+                <iframe
+                    src={link}
+                    style={{
+                        width: '100%',
+                        height: '700px',
+                    }}
+                    allow="camera"
+                    allowFullScreen
+                ></iframe>
+            ) : null}
+
             {/* RESPONSE COMPONENT */}
             <Response link={response} />
+
+            {window.addEventListener('message', function (e) {
+                if (e.data.sahal) {
+                    console.log(e.data.sahal);
+                }
+            })}
+
+            {/* {document.getElementsByClassName('bg-sahal-secondary')[2] &&
+                document.getElementsByClassName('bg-sahal-secondary')[2].onClick = function(){
+                    alert("HI");
+                }} */}
 
             {/* CODE COMPONENT */}
             <Code value={value} link={link} token={token} />

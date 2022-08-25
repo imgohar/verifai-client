@@ -100,7 +100,7 @@ const FacialBiometricKYC = () => {
 
             await axios
                 .get(
-                    `https://demo.sahal.ai/api/v1/face-kyc/face-register/frame-url?reference=${data.userReference}`,
+                    `https://demo.sahal.ai/api/v1/face-kyc/face-register/frame-url?reference=${data.userReference}&redirect_url=https://google.com`,
                     config
                 )
                 .then((res) => {
@@ -252,6 +252,18 @@ const FacialBiometricKYC = () => {
                 token can be copied from integration menu of dashboard once you
                 get approved.
             </p>
+
+            {link != '' ? (
+                <iframe
+                    src={link}
+                    style={{
+                        width: '100%',
+                        height: '700px',
+                    }}
+                    allow="camera"
+                    allowFullScreen
+                ></iframe>
+            ) : null}
 
             {/* RESPONSE COMPONENT */}
             <Response link={response} />

@@ -4,6 +4,7 @@
     "private": true,
     "developer": "Gohar Ashraf",
     "dev-email": "gohar.ashraf78611@gmail.com",
+    "homepage": "https://imgohar/sahal-client",
     "dependencies": {
         "@emotion/react": "^11.9.3",
         "@emotion/styled": "^11.9.3",
@@ -39,6 +40,8 @@
         "autoprefixer": "10.4.5"
     },
     "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
@@ -61,5 +64,8 @@
             "last 1 firefox version",
             "last 1 safari version"
         ]
+    },
+    "devDependencies": {
+        "gh-pages": "^4.0.0"
     }
 }
